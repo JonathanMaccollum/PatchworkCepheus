@@ -1,5 +1,5 @@
-*_files/
-node_modules/*
+src/*_files/
+src/node_modules/*
 *pipp_*.*
 pipp*/
-eigenVector.50mm.QuickHaFull_files.zip
+

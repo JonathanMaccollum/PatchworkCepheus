@@ -14,12 +14,12 @@
 import-module "$PSScriptRoot\Bin\DeepZoomTools.DLL"
 
 $sources = @(
-    New-PatchworkSource -Target "Stars" -Author "PixInsight" -Source ""
-    New-PatchworkSource -Target "Annotated" -Author "PixInsight" -Source ""
+    New-PatchworkSource -Target "Stars" -Author "PixInsight" -Source "https://www.darkflats.com/PatchworkCepheus/PatchworkCepheus.Stars.png"
+    New-PatchworkSource -Target "Annotated" -Author "PixInsight" -Source "https://www.darkflats.com/PatchworkCepheus/PatchworkCepheus.Annotated.png"
 )
 $sources|foreach-object {
     $i = $_
-    if(([string]::IsNullOrWhiteSpace($_.Source) ) -or (-not (test-path $_.Source))){
+    if(([string]::IsNullOrWhiteSpace($_.Source) )){
         write-warning "Unable create DZI for $($_.Author)'s target $($_.Target): could not locate file $($_.Source)"
         return;
     }
@@ -34,7 +34,7 @@ $sources|foreach-object {
         $sparse.MaxLevel=20
         #$sparse.ConversionTileFormat = [Microsoft.DeepZoomTools.ImageFormat]::Png
         $sparse.TileFormat = [Microsoft.DeepZoomTools.ImageFormat]::Png
-        $sparse.Create($imageList,"$PSScriptRoot\$($i.Author).$($i.Target).xml")
+        $sparse.Create($imageList,"$PSScriptRoot\src\$($i.Author).$($i.Target).xml")
     }
     catch
     {
