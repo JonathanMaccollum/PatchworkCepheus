@@ -16,8 +16,9 @@ import-module "$PSScriptRoot\Bin\DeepZoomTools.DLL"
 $sources = @(
     #New-PatchworkSource -Target "Stars" -Author "PixInsight" -Source "https://www.darkflats.com/PatchworkCepheus/PatchworkCepheus.Stars.png"
     #New-PatchworkSource -Target "Annotated" -Author "PixInsight" -Source "https://www.darkflats.com/PatchworkCepheus/Sources/eigenVector.Mosaic.2x2.Full.Crop.Annotations.png"
-    New-PatchworkSource -Target "Background.Draft1c" -Author "eigenVector" -Source "https://www.darkflats.com/PatchworkCepheus/Sources/eigenVector.Mosaic.2x2.Full.Crop.Draft1b.jpg"
-    #New-PatchworkSource -Target "LDN 1251" -Author "Rogue" -Source "https://flic.kr/p/2nA5Kno"
+    #New-PatchworkSource -Target "Background.Draft1c" -Author "eigenVector" -Source "https://www.darkflats.com/PatchworkCepheus/Sources/eigenVector.Mosaic.2x2.Full.Crop.Draft1b.jpg"
+    #New-PatchworkSource -Target "LDN 1251" -Author "Rogue" -Source "https://live.staticflickr.com/65535/52237871876_ef916ccfdc_o.jpg"
+    #New-PatchworkSource -Target "LBN 468" -Author "Rogue" -Source "https://live.staticflickr.com/65535/52269653534_2ee03e9e10_o.jpg"
     #New-PatchworkSource -Target "vdb140" -Author "Shinpah" -Source "https://cdn.astrobin.com/thumbs/y36YQPRayPSA_16536x0_b9muqi8S.jpg"
     
 )
