@@ -7,7 +7,7 @@
     <meta name="twitter:description" content="A Deep Zoom view of the Cepheus Region" />
     <meta property="og:title" content="Cepheus Mosaic" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.darkflats.com/PatchworkCepheus/v1/Thumbnails/PatchworkCepheus.Thumb.20221001.JPG" />
+    <meta property="og:image" content="https://www.darkflats.com/PatchworkCepheus/v1/Thumbnails/PatchworkCepheus.Thumb.20221002.JPG" />
     <style>
         body {background:black; min-height:100%;}
         #openseadragon1{position:absolute; top:10;bottom:10;left:10;right:10;overflow:hidden;}
@@ -46,7 +46,7 @@
     <input id="capturedValues" type="text" disabled />
 </div>
 <script src="openseadragon/openseadragon.min.js"></script>
-<script src="PatchworkVisualizer.js"></script>
+<script src="PatchworkVisualizer.0.1.2.js"></script>
 <script type="text/javascript">
     function source(author, name, x=0, y=0, width=1,rotation=0,opacity=1 ){
         return { author, name, x, y, width, rotation, opacity }
@@ -61,12 +61,9 @@
         viewer,
         isDebug:(new URL(location.href).searchParams.get("debug")==='true'),
         sources: [
-            source('eigenVector','Background',0,0,1,0,1),
-
+            source('eigenVector','Background.Draft1c',0,0,1,0,1),
             source('Shinpah','vdb140',0.7633,1.0274,0.0870,78.8,1),
-
-
-            source('PixInsight','Annotated',0,0,1,0,1),
+            source('PixInsight','Annotated',0,0,1,0,.75)
         ]
     });
     function cycleTargets(){

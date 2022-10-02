@@ -155,7 +155,7 @@ function PatchworkVisualizer(
     if(!isDebug){
         
         function toggleRGBMode(){
-            var index=1;
+            var index=getSource('PixInsight','Annotated');
             var selectedItem=sources[index];
             if(selectedItem.opacity===0.75)
                 selectedItem.opacity=0;

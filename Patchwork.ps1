@@ -16,9 +16,9 @@ import-module "$PSScriptRoot\Bin\DeepZoomTools.DLL"
 $sources = @(
     #New-PatchworkSource -Target "Stars" -Author "PixInsight" -Source "https://www.darkflats.com/PatchworkCepheus/PatchworkCepheus.Stars.png"
     #New-PatchworkSource -Target "Annotated" -Author "PixInsight" -Source "https://www.darkflats.com/PatchworkCepheus/Sources/eigenVector.Mosaic.2x2.Full.Crop.Annotations.png"
-    #New-PatchworkSource -Target "Background" -Author "eigenVector" -Source "https://www.darkflats.com/PatchworkCepheus/Sources/eigenVector.Mosaic.2x2.Full.Crop.STFOnly.jpg"
+    New-PatchworkSource -Target "Background.Draft1c" -Author "eigenVector" -Source "https://www.darkflats.com/PatchworkCepheus/Sources/eigenVector.Mosaic.2x2.Full.Crop.Draft1b.jpg"
     #New-PatchworkSource -Target "LDN 1251" -Author "Rogue" -Source "https://flic.kr/p/2nA5Kno"
-    New-PatchworkSource -Target "vdb140" -Author "Shinpah" -Source "https://cdn.astrobin.com/thumbs/y36YQPRayPSA_16536x0_b9muqi8S.jpg"
+    #New-PatchworkSource -Target "vdb140" -Author "Shinpah" -Source "https://cdn.astrobin.com/thumbs/y36YQPRayPSA_16536x0_b9muqi8S.jpg"
     
 )
 $sources|foreach-object {
@@ -38,7 +38,8 @@ $sources|foreach-object {
         $sparse.MaxLevel=14
         $sparse.UseOptimizations=$true
         #$sparse.ConversionTileFormat = [Microsoft.DeepZoomTools.ImageFormat]::Png
-        $sparse.TileFormat = [Microsoft.DeepZoomTools.ImageFormat]::Png
+        #$sparse.TileFormat = [Microsoft.DeepZoomTools.ImageFormat]::Png
+        $sparse.TileFormat = [Microsoft.DeepZoomTools.ImageFormat]::Jpg
         $sparse.Create($imageList,"$PSScriptRoot\src\$($i.Author).$($i.Target).xml")
     }
     catch
