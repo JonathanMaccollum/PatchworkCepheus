@@ -20,7 +20,8 @@ $sources = @(
     #New-PatchworkSource -Target "LDN 1251" -Author "Rogue" -Source "https://live.staticflickr.com/65535/52237871876_ef916ccfdc_o.jpg"
     #New-PatchworkSource -Target "LBN 468" -Author "Rogue" -Source "https://live.staticflickr.com/65535/52269653534_2ee03e9e10_o.jpg"
     #New-PatchworkSource -Target "vdb140" -Author "Shinpah" -Source "https://cdn.astrobin.com/thumbs/y36YQPRayPSA_16536x0_b9muqi8S.jpg"
-    
+    #New-PatchworkSource -Target "CED-214.Draft1" -Author "eigenVector" -Source "https://www.darkflats.com/Widefield/Ced-214/Cassiopeia%20on%20HD%20443%20with%20CED%20214.RGB.R.54x90s.G.74x90s.B.70x90s.Draft1.jpg"    
+    #New-PatchworkSource -Target "Polaris Flare" -Author "Rogue" -Source "https://live.staticflickr.com/65535/52394102732_9dc253c3ce_o.jpg"
 )
 $sources|foreach-object {
     $i = $_
